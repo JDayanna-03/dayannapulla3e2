@@ -1,0 +1,26 @@
+<button class="menu-button" (click)="alternateVisibility()">Menu</button>
+<section class="sidemenu-container"
+    [style.background-color]="theme"
+    [style.width]="widthMenu + '%'"
+    [style.display]="visibleMenu==true? 'flex':' none'"
+    >
+    <div class="item">
+        <img class="imgp" src="https://png.pngtree.com/png-clipart/20230916/original/pngtree-circular-sticker-with-a-polar-bear-with-a-scarf-around-its-png-image_12244967.png" alt="">
+        <p>{{userName}}</p>
+        <!--Interpolacion de datos activada-->
+        <button class="menu2-button" (click)="alternateVisibility()">&lt;---</button>
+    </div>
+    
+    <div class="item">
+        <p><span>📅</span> Dashboard</p>
+    </div>
+    <div class="item">
+        <p><span>🙍</span> Profile</p>
+    </div>
+
+    <div class="item">
+        <button class="bnt" (click)="setTheme()">Change Color</button>
+        <button class="bnt" (click)="setSize()">Change size</button>
+        <!--Ejecutamos event binding-->
+    </div>
+</section>
